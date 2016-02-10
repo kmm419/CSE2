@@ -19,16 +19,16 @@ public class Arithmetic {
         double pantsTax = paSalesTax*numPants*pantsPrice; //shirt Tax
         double beltTax = paSalesTax*numBelt*beltPrice; //belt tax
         double shirtTax = paSalesTax*numShirt*shirtPrice; //pants tax
-        double totalSalesTax = totalCost*paSalesTax; //total paid for this transaction
-        double transaction = totalSalesTax+totalCost;
+        double totalSalesTax = totalCost*paSalesTax; //total tax for this transaction
+        double transaction = totalSalesTax+totalCost; //total paid for the transaction
        
     
-        System.out.println("Total cost of belt before tax: $" + (double) ((int) (beltResult*100))/100);
-        System.out.println("Total cost of shirts before tax: $"+(double) ((int) (shirtResult*100))/100);
-        System.out.println("Total cost of pants before tax: $"+ (double) ((int) (pantsResult*100))/100);
-        System.out.println("Sales tax charged for belt before tax: $"+(double) ((int) (beltTax*100))/100);
-        System.out.println("Sales tax charged for pants: $"+(double) ((int) (pantsTax*100))/100);
-        System.out.println("Sales tax charged for shirts: $"+ (double) ((int) (shirtTax*100))/100);
+        System.out.println("Total cost of belt before tax: $" + (double) ((int) (beltResult*100))/100); 
+        System.out.println("Total cost of shirts before tax: $"+(double) ((int) (shirtResult*100))/100); 
+        System.out.println("Total cost of pants before tax: $"+ (double) ((int) (pantsResult*100))/100); 
+        System.out.println("Sales tax charged for belt before tax: $"+(double) ((int) (beltTax*100))/100); 
+        System.out.println("Sales tax charged for pants: $"+(double) ((int) (pantsTax*100))/100); 
+        System.out.println("Sales tax charged for shirts: $"+ (double) ((int) (shirtTax*100))/100); 
         System.out.println("Subtotal: $"+ (double) ((int) (totalCost*100))/100);
         System.out.println("Total sales tax: $"+ (double) ((int) (totalSalesTax*100))/100);
         System.out.println("Total paid for this transaction: $"+ (double) ((int) (transaction*100))/100);    
