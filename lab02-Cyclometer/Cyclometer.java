@@ -20,7 +20,7 @@ public class Cyclometer {
         System.out.println("Trip 1 took "+(secsTrip1/secondsPerMinute)+" minutes and had "+countsTrip1+" counts.");
         System.out.println("Trip 2 took "+(secsTrip2/secondsPerMinute)+" minutes and had "+countsTrip2+ " counts.");
         totalDistance=countsTrip1*wheelDiameter*PI; //distance of the trip in inches. the distance is the the diameter in inches times PI times to number of wheel rotations
-        distanceTrip1=inchesPerFoot*feetPerMile; //converts inches to feet, feet to miles. Gives distance in miles
+        distanceTrip1ls=inchesPerFoot*feetPerMile; //converts inches to feet, feet to miles. Gives distance in miles
         distanceTrip2=countsTrip1*wheelDiameter*PI/inchesPerFoot/feetPerMile; 
         totalDistance=distanceTrip1+distanceTrip2; //adding both distance numbers together for a total distance
         //Print out output data

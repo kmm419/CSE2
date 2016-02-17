@@ -20,6 +20,10 @@ public class Check{
         totalCost = checkCost * (1 + tipPercent); //for the cost$
         costPerPerson = totalCost / numPeople; //finding individual costs
         dollars = (int)costPerPerson; // number of dollars in the total per person
+        //get dimes amount, e.g., 
+        // (int)(6.73 * 10) % 10 -> 67 % 10 -> 7
+        //  where the % (mod) operator returns the remainder
+        //  after the division:   583%100 -> 83, 27%5 -> 2 
         dimes = (int)(costPerPerson * 10) % 10; // number of dimes in the total per person
         pennies = (int)(costPerPerson *100) % 10; // number of pennies in the total per person
         System.out.println ("Each person in the group owes $" + dollars + '.' + dimes + pennies); //printing out the total in dollars, dimes, and pennies
