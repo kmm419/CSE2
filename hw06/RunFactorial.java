@@ -1,4 +1,5 @@
 import java.util.Scanner; //import Scanner
+//Kimberly Mejia, CSE002
 //calculates factorial of a number
 //practice Scanner function, while statements, nested-if statements, for statments
 public class RunFactorial{ //start of a new class
