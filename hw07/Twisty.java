@@ -50,7 +50,9 @@ public class Twisty{ //start of a public class
         for (int a = 0; a < width; a++){ //number of lines vertically
             for (b = 0; b < length; b++){ //number of lines horizontally
                 if (b / width % 2 == 0){ //knowing what set to print
-                    if(a == b % width) //
+                    if(a == b % width){ //if statement, width = length mod width input
+                        System.out.print("#");
+                    } //end of if statement
                     else if(width - 1 - a == b % width){ //else if statement, width input - 1 - width = length mod width input
                         System.out.print("/"); //print statement
                     } //end of if statement
