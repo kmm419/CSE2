@@ -4,25 +4,15 @@ import java.util.Scanner;
 public class Bowtie{
     public static void main(String[] args){
         Scanner myScanner = new Scanner(System.in);
-int nStars = 9;
-// #1 in lab
-//while(true){ // infinte loop for the entire code
-while( nStars == 9 ){
-   {
-            for(int apples = 0; apples < nStars; ){
-                System.out.println("*********");
-        }// end of for loop
-    }
-} //end of while loop
-
-
+int userInput = 0;
 
 //input between 3 and 33 inclusive #4 on lab
-System.out.println("Please input an odd number between 3 and 33 inclusively.");
+System.out.print("Please input an odd number between 3 and 33 inclusively: ");
+
 while( true ){
     if ( myScanner.hasNextInt() ){
-        nStars = myScanner.nextInt();
-            if(( nStars >= 3) && (nStars <= 33 ) && (nStars % 2 == 1 )){
+        userInput = myScanner.nextInt();
+            if(( userInput >= 3) && (userInput <= 33 ) && (userInput % 2 == 1 )){
                 System.out.println(" ");
                 
                 break;
@@ -39,10 +29,24 @@ while( true ){
      //end of if statement
 } //end of while loop
 
+int nStars = 9;
+int a = userInput - 1;
+int b = 1;
+int c = 0;
+
+
+while(true)
+{ // infinte loop for the entire code
+  
+    
+        
+                
+        
+    } //end of while loop
 
         
         
         
-//} //end of infinte loop for the entire code   
+   
     } //end of main method
 } //end of public class
