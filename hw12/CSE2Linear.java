@@ -24,7 +24,7 @@ public class CSE2Linear{
                             s = userInput[h];   
                         }
                         else{
-                        System.out.print("New input is less than last input given.");  
+                        System.out.print("New input must be less than last input given." );  
                         return;
                         }
                     }
@@ -41,7 +41,7 @@ public class CSE2Linear{
             }  
         System.out.print("Enter a grade to search for: ");
         search = myScanner.nextInt(); //asking the user for input
-        linear(userInput,search); //calling the linear method
+        binary(userInput,search); //calling the linear method
         
         scramble(userInput); //calling the scramble method
         System.out.print("Scrambled: ");
@@ -49,22 +49,35 @@ public class CSE2Linear{
             System.out.print(userInput[x] + " ");
         }
        
-         System.out.print("Enter a grade to search for: ");
+         System.out.println("Enter a grade to search for: ");
         int target = myScanner.nextInt();
-        linear(userInput,target); //calling the linear method
+        binary(userInput,target); //calling the linear method
     }//end of main method
         
-    //method for li-near search in an array 
-    public static int[] linear(int[] list, int search){
-       int j = 0;
-                for(int i = 0; i < list.length; i++){
-                    if(search == list[i]){
-                        System.out.println("Found it with " + (j + 1) + " iterations.");
-                    }
-                    else{
-                        j++;
-                    }
-                }
+    //method for binary search in an array 
+    public static int[] binary(int[] list, int search){
+        int j = 0;
+        int min = 0;
+        int max = list.length - 1;
+        int middle;
+        
+        while(min <= max){
+            j++;
+            middle = ((min + max) / 2); //finds the middle element of the array
+            if(list[middle] == search){
+                System.out.println("Element " + search + " found with " + (j + 1) + " iterations.");
+                break;
+            }
+            else if(list[middle] < search){ //divides the array to search in the top half
+                min = middle + 1;
+            }
+            else if(list[middle] > search){ //divides the array to search in the bottom half
+                max = middle - 1;
+            }
+            if(min > max){ //if it can't be found in the array
+                System.out.println("Element " + search + " was not found with " + (j + 1) + " iterations.");
+            }
+        }
                 return list; 
     } //end of linear search method
    
@@ -73,7 +86,7 @@ public class CSE2Linear{
        
        for(int r = 0; r < list2.length; r++){
            int point = (int)(list2.length * Math.random());
-           
+           //replaces element positions
            int temp = list2[point];
            list2[point] = list2[r];
            list2[r] = temp;

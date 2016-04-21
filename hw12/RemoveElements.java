@@ -84,7 +84,7 @@ int index,target;
       int posCount = 0; //intialize variable for counting the target number
       for(int l = 0; l < list.length; l++){ //run through the array to count how many target numbers there are
           if(list[l] == pos){
-              posCount++;
+              posCount++; //counter
           }
       }
       if( posCount == 0){
@@ -99,7 +99,6 @@ int index,target;
       int newRemArray = 0;
       for(int m = 0; m < list.length; m++){
           if(list[m] == pos){ //check to see if the number is not the target
-              
           }
           else{
              remArray[newRemArray] = list[m]; //if its not the number, add it to the new array
